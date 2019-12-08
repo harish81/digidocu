@@ -5,7 +5,7 @@ manage documents with features like permissions, resize & compress images, combi
 zip all files etc..
 
 ## Installation
-1. Download latest release from [here](#) or clone repository.
+1. Download latest release from [here](https://github.com/harish81/digidocu/releases) or clone repository.
 2. Run `composer install`.
 3. Copy & setup `.env` file.
 4. Create database & Change `DB_DATABASE` in `.env`.
