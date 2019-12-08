@@ -23,7 +23,13 @@ zip all files etc..
 1. [User Documentation](#)
 2. [Developer Documentation](#)
 
+## Contribution
+ - Please explain your PR in clear language otherwise your PR may rejected.
+ - Contribute to documentation in `public/docs` directory. 
+ 
+## Licence
+  - DigiDocu is primary licenced under [GPLv3 license](https://github.com/harish81/digidocu/blob/master/LICENSE).
+  - For Enterprise licence contact us at [nanadoliyaharish@gmail.com](mailto:nanadoliyaharish@gmail.com) 
 
-## Troubleshooting
- - Run `php artisan cache:forget spatie.permission.cache` in case you have problem
- with permissions.
+## Solutions
+ - For Hosted Solutions contact us at [nanadoliyaharish@gmail.com](mailto:nanadoliyaharish@gmail.com)
