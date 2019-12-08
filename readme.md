@@ -29,7 +29,7 @@ zip all files etc..
  
 ## Licence
   - DigiDocu is primary licenced under [GPLv3 license](https://github.com/harish81/digidocu/blob/master/LICENSE).
-  - For Enterprise licence contact us at [nanadoliyaharish@gmail.com](mailto:nanadoliyaharish@gmail.com) 
+  - For Enterprise licence contact us at [nandoliyaharish@gmail.com](mailto:nandoliyaharish@gmail.com) 
 
 ## Solutions
- - For Hosted Solutions contact us at [nanadoliyaharish@gmail.com](mailto:nanadoliyaharish@gmail.com)
+ - For Hosted Solutions contact us at [nandoliyaharish@gmail.com](mailto:nandoliyaharish@gmail.com)
