@@ -1,0 +1,9 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-6 {{ $errors->has('$FIELD_NAME$') ? 'has-error' :'' }}">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('$FIELD_NAME$', 0) !!}
+        {!! Form::checkbox('$FIELD_NAME$', '$CHECKBOX_VALUE$', null) !!} $CHECKBOX_VALUE$
+    </label>
+    {!! $errors->first('$FIELD_NAME$','<span class="help-block">:message</span>') !!}
+</div>

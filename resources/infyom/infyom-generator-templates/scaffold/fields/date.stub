@@ -1,0 +1,15 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-6 {{ $errors->has('$FIELD_NAME$') ? 'has-error' :'' }}">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    {!! Form::date('$FIELD_NAME$', null, ['class' => 'form-control','id'=>'$FIELD_NAME$']) !!}
+    {!! $errors->first('$FIELD_NAME$','<span class="help-block">:message</span>') !!}
+</div>
+
+@section('scripts')
+    <script type="text/javascript">
+        $('#$FIELD_NAME$').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            useCurrent: false
+        })
+    </script>
+@endsection
