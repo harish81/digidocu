@@ -19,5 +19,5 @@ DigiDocu help to manage documents in an organization easily with following set o
 -   Custom fields with validation.
 -   Custom validation constraints for each type of file.
 -   Dynamic naming of `tags`, `documents` & `files` to suits your organization need.
--   Read more at [interface](user/interface/README.md).
+-   Read more at [interface](user/interface/README.md) guide.
 
