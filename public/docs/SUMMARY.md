@@ -10,6 +10,6 @@
     * [Documents Management](user/interface/document-management.md)
 * [Developer Documentation](dev/README.md)
   * [Installation](dev/install.md)
-  * [Getting Started](dev/getting-start.md)
+  * [Code Guideline](dev/getting-start.md)
   * [Troubleshooting](dev/troubleshooting.md)
 
