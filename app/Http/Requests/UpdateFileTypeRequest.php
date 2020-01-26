@@ -26,7 +26,7 @@ class UpdateFileTypeRequest extends FormRequest
     public function rules()
     {
         $rules = FileType::$rules;
-        
+
         return $rules;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Rules\ValidationRuleSyntaxChecker;
 use Eloquent as Model;
 
 /**
@@ -9,11 +10,6 @@ use Eloquent as Model;
  *
  * @package App
  * @version November 12, 2019, 12:21 pm IST
- * @property string name
- * @property integer no_of_files
- * @property string labels
- * @property string file_validations
- * @property integer file_maxsize
  * @property int $id
  * @property string $name
  * @property int $no_of_files
@@ -39,7 +35,7 @@ class FileType extends Model
 {
 
     public $table = 'file_types';
-    
+
 
 
 
@@ -78,5 +74,10 @@ class FileType extends Model
         'file_maxsize' => 'required|integer'
     ];
 
-    
+    protected static function boot()
+    {
+        parent::boot();
+        self::$rules['file_validations'] = ['required', new ValidationRuleSyntaxChecker()];
+    }
+
 }

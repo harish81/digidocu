@@ -151,3 +151,19 @@ function groupDocumentsPermissions($permissions)
     }
     return $docWise;
 }
+
+/**
+ * Check if validation rule syntax is valid.
+ * @param $rules array|string the rules given.
+ * @return bool true if validation rule syntax is valid, false otherwise.
+ */
+function isValidationRulesValid($rules)
+{
+    try {
+        $vr = \Validator::make(['test' => 'x'], ['test' => $rules]);
+        $vr->passes();
+        return true;
+    } catch (Exception $e) {
+        return false;
+    }
+}

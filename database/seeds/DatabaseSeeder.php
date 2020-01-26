@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingsTableSeeder::class,
             UsersTableSeeder::class,
-            PermissionsTableSeeder::class
+            PermissionsTableSeeder::class,
+            FileTypesSeeder::class
         ]);
     }
 }

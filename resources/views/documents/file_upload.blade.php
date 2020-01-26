@@ -130,7 +130,7 @@
                         showErrors(err.responseJSON.errors);
                     }
                 },
-                complete: function(data){
+                complete: function (data) {
                     $(frm).find("button[type='submit']").html(oldHtmlBtn).attr("disabled", false);
                 },
                 cache: false,
@@ -144,7 +144,9 @@
     <section class="content-header">
         <h1>
             Upload {{ucfirst(config('settings.file_label_plural'))}} - <small>{{$document->name}}</small>
-            <button class="btn btn-primary pull-right" onclick="javascript:window.history.back();"><i class="fa fa-arrow-left"></i> Back</button>
+            <button class="btn btn-primary pull-right" onclick="javascript:window.history.back();"><i
+                    class="fa fa-arrow-left"></i> Back
+            </button>
         </h1>
     </section>
     <div class="content">
@@ -156,12 +158,20 @@
                 {!! implode('', $errors->all('<li>:message</li>'))  !!}
             </div>
         @endif
+        @if(!count($fileTypes))
+            <div class="alert alert-warning alert-dismissible">
+                <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
+                <strong>There is no {{config('settings.file_label_singular')." type"}},</strong> Please add atleast one.
+                <a href="{{route('fileTypes.create')}}">Add {{config('settings.file_label_singular')." type"}}</a>
+            </div>
+        @endif
         {!! Form::open(['route' => ['documents.files.store',$document->id],'files'=>true, 'id'=>'frmUploads']) !!}
         <div id="files_container">
 
         </div>
         <div style="text-align: center">
-            <button type="button" class="btn btn-info btn-sm" onclick="addRow()"><i class="fa fa-plus"></i> Add {{ucfirst(config('settings.file_label_singular'))}}
+            <button type="button" class="btn btn-info btn-sm" onclick="addRow()"><i class="fa fa-plus"></i>
+                Add {{ucfirst(config('settings.file_label_singular'))}}
             </button>
             <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Upload</button>
         </div>

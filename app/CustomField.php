@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Rules\ValidationRuleSyntaxChecker;
 use Eloquent as Model;
 
 /**
@@ -65,5 +66,12 @@ class CustomField extends Model
         'validation' => 'nullable',
         'suggestions' => 'nullable'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        self::$rules['validation'] = ['nullable', new ValidationRuleSyntaxChecker()];
+    }
+
 
 }
