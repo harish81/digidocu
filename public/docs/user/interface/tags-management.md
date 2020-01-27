@@ -1,7 +1,7 @@
 # Tags Management
 
 Tags are treated as like departments or branches or just tags. 
-tag's label can be changed in [settings](#) as per your requirements.
+tag's label can be changed in [settings](advanced-settings/settings.md) as per your requirements.
 
 ![Tags List](../../.gitbook/assets/tags_screen.png)
 
@@ -11,4 +11,4 @@ tag's label can be changed in [settings](#) as per your requirements.
 - **Color** - The color of the tag label.
 
 > **Note:** The additional or custom fields can be configured 
-for tags from the [custom fields](#) section.
+for tags from the [custom fields](advanced-settings/custom-fields.md) section.
