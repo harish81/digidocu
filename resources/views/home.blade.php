@@ -4,7 +4,7 @@
     <script>
         function gotoUpload() {
             var docId = $("#document_id").val();
-            var urlToUp = '{{route('documents.files.create',['id'=>''])}}'+'/'+docId;
+            var urlToUp = "{{route('documents.files.create', '')}}"+"/"+docId;
             console.log(urlToUp);
             window.location.href = urlToUp;
             return false;
