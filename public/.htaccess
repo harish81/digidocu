@@ -2,12 +2,6 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
-##Php Settings
-    php_value upload_max_filesize 20M
-    php_value post_max_size 64M
-    php_value max_execution_time 300
-    php_value memory_limit 256M
-##End php setting
     RewriteEngine On
 
     # Handle Authorization Header
