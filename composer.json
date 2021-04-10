@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "ext-fileinfo": "*",
         "ext-zip": "*",
         "barryvdh/laravel-dompdf": "^0.8.5",
         "fideloper/proxy": "^4.0",
@@ -19,10 +20,10 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",
         "spatie/laravel-permission": "^3.2",
+        "stevebauman/purify": "^4.0",
         "yajra/laravel-datatables-buttons": "^4.8",
         "yajra/laravel-datatables-html": "^4.19",
-        "yajra/laravel-datatables-oracle": "~9.0",
-        "ext-fileinfo": "*"
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
