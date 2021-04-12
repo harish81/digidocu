@@ -5,6 +5,7 @@ namespace App\Http\Requests;
 use App\Rules\CurrentPassword;
 use App\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Stevebauman\Purify\Facades\Purify;
 
 class UpdateProfileRequest extends FormRequest
 {
@@ -43,5 +44,22 @@ class UpdateProfileRequest extends FormRequest
             ];
         }
         return [];
+    }
+
+     /**
+     * Extend the default getValidatorInstance method
+     * so description field can be escaped
+     *
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function getValidatorInstance()
+    {
+        $request = $this->toArray();
+        if (array_key_exists('description', $request)) {
+            $description = $request["description"];
+            $escaped_description = Purify::clean($description);
+            $this->merge(array('description' => $escaped_description));
+        }
+        return parent::getValidatorInstance();
     }
 }
