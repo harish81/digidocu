@@ -62,7 +62,7 @@
                         <form action="#" class="text-center" style="width: 30vw;margin: 0 auto;" onsubmit="return gotoUpload()">
                             <div class="form-group">
                                 <label for="">Choose {{ucfirst(config('settings.document_label_singular'))}}</label>
-                                <select name="document_id" id="document_id" class="form-control select2">
+                                <select name="document_id" id="document_id" class="form-control select2" required>
                                     @foreach ($documents as $document)
                                         @can('view',$document)
                                             <option value="{{$document->id}}">{{$document->name}}</option>
