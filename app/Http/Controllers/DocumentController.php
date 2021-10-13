@@ -132,6 +132,7 @@ class DocumentController extends Controller
         $this->authorize('view', $document);
 
         $missigDocMsgs = $this->documentRepository->buildMissingDocErrors($document);
+        $dataToRet = compact('document', 'missigDocMsgs');
 
         if (auth()->user()->can('user manage permission')) {
             $users = User::where('id', '!=', 1)->get();
@@ -140,8 +141,10 @@ class DocumentController extends Controller
             $tagWisePermList = $this->permissionRepository->getTagWiseUsersPermissionsForDoc($document);
             //Global Permission
             $globalPermissionUsers = $this->permissionRepository->getGlobalPermissionsForDoc($document);
+
+            $dataToRet = array_merge($dataToRet, compact('users', 'thisDocPermissionUsers', 'tagWisePermList', 'globalPermissionUsers'));
         }
-        return view('documents.show', compact('document', 'missigDocMsgs', 'users', 'thisDocPermissionUsers', 'tagWisePermList', 'globalPermissionUsers'));
+        return view('documents.show', $dataToRet);
     }
 
     public function storePermission($id, Request $request)
@@ -242,7 +245,11 @@ class DocumentController extends Controller
 
     public function showUploadFilesUi($id)
     {
-        $document = Document::findOrFail($id);
+        $document = Document::find($id);
+        if(empty($document)){
+            Flash::error("Oh No..., try to create some ".config('settings.document_label_singular')." before uploading ".config('settings.file_label_plural'));
+            return redirect()->route('documents.index');
+        }
         $this->authorize('update', [$document, $document->tags->pluck('id')]);
         $fileTypes = FileType::pluck('name', 'id');
         $customFields = $this->customFieldRepository->getForModel('files');
