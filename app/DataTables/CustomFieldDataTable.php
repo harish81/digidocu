@@ -79,7 +79,7 @@ class CustomFieldDataTable extends DataTable
      *
      * @return string
      */
-    protected function filename()
+    protected function filename(): string
     {
         return 'custom_fieldsdatatable_' . time();
     }
