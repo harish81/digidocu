@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.1",
+        "php": "^8.1",
         "ext-fileinfo": "*",
         "ext-zip": "*",
         "barryvdh/laravel-dompdf": "^2.0",
@@ -26,12 +26,12 @@
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
-        "spatie/laravel-ignition": "^2.0",
-        "fzaninotto/faker": "^1.4",
+        "fakerphp/faker": "^1.21",
         "laravel/ui": "^4.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^7.0",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^10.0",
+        "spatie/laravel-ignition": "^2.0"
     },
     "config": {
         "optimize-autoloader": true,
