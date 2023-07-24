@@ -145,7 +145,7 @@
         <h1>
             Upload {{ucfirst(config('settings.file_label_plural'))}} - <small>{{$document->name}}</small>
             <button class="btn btn-primary pull-right" onclick="javascript:window.history.back();"><i
-                    class="fa fa-arrow-left"></i> Back
+                    class="fa fa-arrow-left"></i> Voltar
             </button>
         </h1>
     </section>
@@ -154,14 +154,14 @@
         @if ($errors->any())
             <div class="alert alert-danger alert-dismissible">
                 <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                <strong>Check These Errors:</strong>
+                <strong>Verifique esses erros:</strong>
                 {!! implode('', $errors->all('<li>:message</li>'))  !!}
             </div>
         @endif
         @if(!count($fileTypes))
             <div class="alert alert-warning alert-dismissible">
                 <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                <strong>There is no {{config('settings.file_label_singular')." type"}},</strong> Please add atleast one.
+                <strong>There is no {{config('settings.file_label_singular')." type"}},</strong> Por favor adicione pelo menos um.
                 <a href="{{route('fileTypes.create')}}">Add {{config('settings.file_label_singular')." type"}}</a>
             </div>
         @endif
@@ -171,9 +171,9 @@
         </div>
         <div style="text-align: center">
             <button type="button" class="btn btn-info btn-sm" onclick="addRow()"><i class="fa fa-plus"></i>
-                Add {{ucfirst(config('settings.file_label_singular'))}}
+                Adicionar {{ucfirst(config('settings.file_label_singular'))}}
             </button>
-            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Upload</button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Enviar</button>
         </div>
         {!! Form::close() !!}
     </div>

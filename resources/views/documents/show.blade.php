@@ -59,7 +59,7 @@
                             <div class="form-group">
                                 <a href="{{\Illuminate\Support\Str::finish(route('files.showfile',['dir'=>'original']),"/")}}@{{file}}?force=true"
                                    download class="btn btn-primary"><i
-                                        class="fa fa-download"></i> Download original
+                                        class="fa fa-download"></i> Baixar original
                                 </a>
                             </div>
                             <div class="form-group">
@@ -94,7 +94,7 @@
                     <div class="clearfix"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close"></i>
-                            Close
+                            Fechar
                         </button>
                     </div>
                 </div>
@@ -145,11 +145,11 @@
         <h1 class="pull-right" style="margin-bottom: 5px;">
             <div class="dropdown" style="display: inline-block">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i
-                        class="fa fa-download"></i> Download Zip
+                        class="fa fa-download"></i> Baixar Zip
                     <span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{route('files.downloadZip',['dir'=>'all','id'=>$document->id])}}">All</a>
+                        <a href="{{route('files.downloadZip',['dir'=>'all','id'=>$document->id])}}">Tudo</a>
                     </li>
                     <li>
                         <a href="{{route('files.downloadZip',['dir'=>'original','id'=>$document->id])}}">Original</a>
@@ -187,7 +187,7 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>{{ucfirst(config('settings.document_label_singular'))}} Name:</label>
+                            <label>{{ucfirst(config('settings.document_label_singular'))}} Nome:</label>
                             <p>{{$document->name}}</p>
                         </div>
                         <div class="form-group">
@@ -206,7 +206,7 @@
                             </div>
                         @endforeach
                         <div class="form-group">
-                            <label>Description:</label>
+                            <label>Descrição:</label>
                             <p>{!! $document->description !!}</p>
                         </div>
                         <div class="form-group">
@@ -220,16 +220,16 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>Created By:</label> {{$document->createdBy->name}}
+                            <label>Criado Por:</label> {{$document->createdBy->name}}
                         </div>
                         <div class="form-group">
-                            <label>Created At:</label>
+                            <label>Criado Em:</label>
                             <p>{!! formatDateTime($document->created_at) !!} <br>
                                 ({{\Carbon\Carbon::parse($document->created_at)->diffForHumans()}})
                             </p>
                         </div>
                         <div class="form-group">
-                            <label>Last Updated:</label>
+                            <label>Última Atualização:</label>
                             <p>{!! formatDateTime($document->updated_at) !!} <br>
                                 ({{\Carbon\Carbon::parse($document->updated_at)->diffForHumans()}})
                             </p>

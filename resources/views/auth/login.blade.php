@@ -43,13 +43,13 @@
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
         <form method="post" action="{{ url('/login') }}">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('username') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username">
+                <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Usuario">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 @if ($errors->has('username'))
                     <span class="help-block">
@@ -59,7 +59,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="Senha" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 @if ($errors->has('password'))
                     <span class="help-block">
@@ -72,20 +72,20 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> Lembrar-me
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-        {{--<a href="{{ url('/register') }}" class="text-center">Register a new membership</a>--}}
+        <a href="{{ url('/password/reset') }}">Esqueci minha senha</a><br>
+        {{--<a href="{{ url('/register') }}" class="text-center">Registrar</a>--}}
 
     </div>
     <!-- /.login-box-body -->

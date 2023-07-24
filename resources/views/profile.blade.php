@@ -29,8 +29,8 @@
             <div class="col-sm-12">
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">Profile</a></li>
-                        <li class=""><a href="#ch_pwd" data-toggle="tab" aria-expanded="false">Change Password</a></li>
+                        <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">Perfil</a></li>
+                        <li class=""><a href="#ch_pwd" data-toggle="tab" aria-expanded="false">Mudar Senha</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="profile">
@@ -73,7 +73,7 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-8">
                                     <button type="submit" class="btn btn-primary" value="btnprofile" name="btnprofile">
-                                        Update Profile
+                                        Atualizar Perfil
                                     </button>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-8">
                                     <button type="submit" class="btn btn-primary" value="btnpass" name="btnpass">
-                                        Change Password
+                                        Atualizar Senha
                                     </button>
                                 </div>
                             </div>

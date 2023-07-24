@@ -48,7 +48,7 @@
             <div class="col-md-8">
                 <div class="box box-default">
                     <div class="box-header no-border text-center">
-                        <h3 class="box-title">Quick Upload</h3>
+                        <h3 class="box-title">Envio Rápido</h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
@@ -61,7 +61,7 @@
                     <div class="box-body">
                         <form action="#" class="text-center" style="width: 30vw;margin: 0 auto;" onsubmit="return gotoUpload()">
                             <div class="form-group">
-                                <label for="">Choose {{ucfirst(config('settings.document_label_singular'))}}</label>
+                                <label for="">Escolher {{ucfirst(config('settings.document_label_singular'))}}</label>
                                 <select name="document_id" id="document_id" class="form-control select2" required>
                                     @foreach ($documents as $document)
                                         @can('view',$document)
@@ -71,7 +71,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary">Upload</button>
+                                <button class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -85,7 +85,7 @@
                         <span class="info-box-text">{{ucfirst(config('settings.tags_label_plural'))}}</span>
                         <span class="info-box-number">{{$tagCounts}}</span>
                         <span class="progress-description">
-                    Total {{ucfirst(config('settings.tags_label_plural'))}} in system
+                    Total {{ucfirst(config('settings.tags_label_plural'))}} no sistema
                   </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -97,7 +97,7 @@
                         <span class="info-box-text">{{ucfirst(config('settings.document_label_plural'))}}</span>
                         <span class="info-box-number">{{$documentCounts}}</span>
                         <span class="progress-description">
-                    Containing {{$filesCounts}} {{ucfirst(config('settings.file_label_plural'))}}
+                    Contendo {{$filesCounts}} {{ucfirst(config('settings.file_label_plural'))}}
                   </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -108,14 +108,14 @@
             <div class="col-sm-12">
                 <div class="box box-default">
                     <div class="box-header no-border">
-                        <h3 class="box-title">Activity</h3>
+                        <h3 class="box-title">Atividades</h3>
 
                         <div class="box-tools pull-right">
                             {!! Form::open(['method' => 'get','style'=>'display:inline;']) !!}
                                 {!! Form::hidden('activity_range', '', ['id' => 'activity_range']) !!}
                                 <button type="button" id="activityrange" class="btn btn-default btn-sm">
                                     <i class="fa fa-calendar"></i>&nbsp;
-                                    <span>Choose dates</span> <i class="fa fa-caret-down"></i>
+                                    <span>Escolher datas</span> <i class="fa fa-caret-down"></i>
                                 </button>
                                 {!! Form::button('<i class="fa fa-filter"></i>&nbsp;Filter', ['class' => 'btn btn-default btn-sm','type'=>'submit']) !!}
                             {!! Form::close() !!}
