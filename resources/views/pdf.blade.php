@@ -9,7 +9,7 @@
 </head>
 <body style="margin: 0 auto">
     @foreach ($filePaths as $file)
-        <img src="{{$file}}" style="display:block;margin-bottom: 0px;width: 100%">
+        <img src="{{$file}}" style="display:block;margin-bottom: 0;width: 100%" alt="">
     @endforeach
 </body>
 </html>
