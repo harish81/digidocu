@@ -85,11 +85,11 @@
             {{config('settings.system_title')}}
         </div>
 
-        <div class="links">
-            <blockquote>
-                {{$quotes}}
-            </blockquote>
-        </div>
+{{--        <div class="links">--}}
+{{--            <blockquote>--}}
+{{--                {{$quotes}}--}}
+{{--            </blockquote>--}}
+{{--        </div>--}}
     </div>
 </div>
 </body>
